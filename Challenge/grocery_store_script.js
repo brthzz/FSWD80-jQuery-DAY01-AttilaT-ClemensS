@@ -29,7 +29,7 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/pink-lady-apfel-tasse/00-89243",
 
-   "number_of_stock" : 200,
+   "" : 200,
 
 }, {
 
@@ -114,11 +114,9 @@ $(".wrapper>div>p").css({"background-color":"grey"});
 $(".wrapper>div>img").css({"width":"600px" , "height" : "400px", "object-fit":"cover",});
 $(".wrapper>div>p").css({"text-align":"center" , "font-family":"arial", "font-size" : "20px", });
 
-const test23 = document.getElementsByClassName("number_of_stock");
-
-for (i = 0; i < test23.length; i++)
+for (i = 0; i < articles.length; i++)
       {
-      if (i==0)
+      if (articles[i].number_of_stock==0)
          {
          $("span:eq("+i+")").css({"background-color":"red"});
          } else {
