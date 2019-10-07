@@ -61,7 +61,7 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/kiwi/00-400018",
 
-   "number_of_stock" : 0,
+   "number_of_stock" : 500,
 
 }, {
 
@@ -93,7 +93,7 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/heidelbeeren/00-410607",
 
-   "number_of_stock" : 78,
+   "number_of_stock" : 0,
 }];
 
 //wrapper for flexbox
@@ -116,15 +116,13 @@ $(".wrapper>div>p").css({"text-align":"center" , "font-family":"arial", "font-si
 
 const test23 = document.getElementsByClassName("number_of_stock");
 
-// console.log(test23);
-
 for (i = 0; i < test23.length; i++)
       {
-      if (test23[i]==0)
+      if (i==0)
          {
-         $(".wrapper span").css({"background-color":"red"});
+         $("span:eq("+i+")").css({"background-color":"red"});
          } else {
-         $(".wrapper span").css({"background-color":"green"});
+         $("span:eq("+i+")").css({"background-color":"green"});
          };
       }
 
