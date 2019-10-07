@@ -13,6 +13,8 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/ja-natuerlich-bananen/00-402489",
 
+   "number_of_stock" : 0,
+
 }, {
 
    "article_id": "2",
@@ -26,6 +28,8 @@ var articles = [{
    "link_online" : "https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639_960_720.jpg",
 
    "link": "https://www.billa.at/produkte/pink-lady-apfel-tasse/00-89243",
+
+   "number_of_stock" : 200,
 
 }, {
 
@@ -41,6 +45,8 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/pink-lady-apfel-tasse/00-89243",
 
+   "number_of_stock" : 50,
+
 }, {
 
     "article_id": "4",
@@ -54,6 +60,8 @@ var articles = [{
    "link_online" : "https://image.shutterstock.com/image-photo/ripe-whole-kiwi-fruit-half-600w-699645964.jpg",
 
    "link": "https://www.billa.at/produkte/kiwi/00-400018",
+
+   "number_of_stock" : 0,
 
 }, {
 
@@ -69,6 +77,8 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/da-komm-ich-her-erdbeeren/00-89480",
 
+   "number_of_stock" : 5,
+
 }, {
 
     "article_id": "6",
@@ -82,15 +92,39 @@ var articles = [{
    "link_online" : "https://image.shutterstock.com/image-photo/blueberry-isolated-on-white-background-260nw-1500487817.jpg",
 
    "link": "https://www.billa.at/produkte/heidelbeeren/00-410607",
+
+   "number_of_stock" : 78,
 }];
 
-// $(document).ready(function() {
-var newItem = '<div class="wrapper">test</div>'; // definition of the new element
+//wrapper for flexbox
+var newItem = '<div class="wrapper"></div>';
+//add wrapper
 $("body").append(newItem);
 
 for (i = 0; i < number_of_articles; i++)
       {
-         var newItem_1 = '<div><img src='+articles[i].link_online+' alt='+articles[i].description+'><p class="description_img">'+articles[i].description+'</div>'; // definition of the new element
+         // definition of the new element
+         var newItem_1 = '<div><img src='+articles[i].link_online+' alt='+articles[i].description+'><p class="description_img">'+articles[i].description+ ' ' + '<span class="number_of_stock">' +articles[i].number_of_stock + '</span></p></div>'; 
+         // insert the new element  
          $(".wrapper").append(newItem_1); 
          }
-         // insert the new element before the <li> tag 
+
+$(".wrapper").css({"display":"flex","flex-wrap":"wrap","width":"100%",});
+$(".wrapper>div>p").css({"background-color":"grey"});
+$(".wrapper>div>img").css({"width":"600px" , "height" : "400px", "object-fit":"cover",});
+$(".wrapper>div>p").css({"text-align":"center" , "font-family":"arial", "font-size" : "20px", });
+
+const test23 = document.getElementsByClassName("number_of_stock");
+
+// console.log(test23);
+
+For (i = 0; i < test23.length; i++)
+      {
+      if (test23[i]=0)
+         {
+            $(".wrapper span").css({"background-color":"red"});
+         } else {
+            $(".wrapper span").css({"background-color":"green"});
+         };
+      }
+
