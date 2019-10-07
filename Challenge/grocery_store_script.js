@@ -83,3 +83,14 @@ var articles = [{
 
    "link": "https://www.billa.at/produkte/heidelbeeren/00-410607",
 }];
+
+// $(document).ready(function() {
+var newItem = '<div class="wrapper">test</div>'; // definition of the new element
+$("body").append(newItem);
+
+for (i = 0; i < number_of_articles; i++)
+      {
+         var newItem_1 = '<div><img src='+articles[i].link_online+' alt='+articles[i].description+'><p class="description_img">'+articles[i].description+'</div>'; // definition of the new element
+         $(".wrapper").append(newItem_1); 
+         }
+         // insert the new element before the <li> tag 
