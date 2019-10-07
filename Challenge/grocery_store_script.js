@@ -118,13 +118,13 @@ const test23 = document.getElementsByClassName("number_of_stock");
 
 // console.log(test23);
 
-For (i = 0; i < test23.length; i++)
+for (i = 0; i < test23.length; i++)
       {
-      if (test23[i]=0)
+      if (test23[i]==0)
          {
-            $(".wrapper span").css({"background-color":"red"});
+         $(".wrapper span").css({"background-color":"red"});
          } else {
-            $(".wrapper span").css({"background-color":"green"});
+         $(".wrapper span").css({"background-color":"green"});
          };
       }
 
